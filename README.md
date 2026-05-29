@@ -16,4 +16,3 @@ pio run -e esp32dev_bt -t upload
 pio device monitor --port /dev/cu.usbserial-0001 --baud 115200 --filter printable
 ```
 
-Both environments set `ARDUINO_LOOP_STACK_SIZE=16384` so the comparison focuses on heap/SRAM pressure instead of the default Arduino loop task stack.
