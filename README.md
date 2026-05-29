@@ -9,10 +9,4 @@ pio run -e esp32dev_no_bt
 pio run -e esp32dev_bt
 ```
 
-The Bluetooth build enables classic `BluetoothSerial` before ADC and Opus setup:
-
-```sh
-pio run -e esp32dev_bt -t upload
-pio device monitor --port /dev/cu.usbserial-0001 --baud 115200 --filter printable
-```
 
