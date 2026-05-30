@@ -11,7 +11,7 @@ pio run -e esp32dev_patch_no_bt -t upload -t monitor
 pio run -e esp32dev_patch_bt -t upload -t monitor
 ```
 
-Failure:
+## Failure 1:
 ```
 
 assert failed: opus_encode_native opus_encoder.c:1631 (pcm_buf!=NULL)
@@ -35,6 +35,7 @@ Backtrace: 0x4008394d:0x3ffccf10 0x40094fa1:0x3ffccf30 0x4009a4f9:0x3ffccf50 0x4
   #10 0x400f55fd in uart_set_parity at /home/runner/work/esp32-arduino-lib-builder/esp32-arduino-lib-builder/esp-idf/components/driver/uart.c:281 (discriminator 2)
 ```
 
+## Failure 2:
 ```
 
 assert failed: block_locate_free heap_tlsf.c:441 (block_size(block) >= size)
