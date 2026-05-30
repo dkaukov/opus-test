@@ -37,6 +37,43 @@ Backtrace: 0x4008394d:0x3ffccf10 0x40094fa1:0x3ffccf30 0x4009a4f9:0x3ffccf50 0x4
 
 ## Failure 2:
 ```
+I] AnalogAudioStream.h : 72 - virtual void audio_tools::AnalogAudioStream::end()
+[I] AnalogDriverESP32.h : 138 - end
+after capture: free_heap=279268 min_free_heap=261092 largest_block=110580 free_psram=0 loop_stack_free=2172
+[I] AnalogConfigESP32.h : 53 - I2S_MODE_DAC_BUILT_IN
+[I] AnalogAudioStream.h : 66 - bool audio_tools::AnalogAudioStream::begin(audio_tools::AnalogConfig)
+[I] AnalogDriverESP32.h : 47 - virtual bool audio_tools::AnalogDriverESP32::begin(audio_tools::AnalogConfigESP32)
+[I] AudioTypes.h : 128 -  sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+[I] AnalogConfigESP32.h : 63 - analog left output pin: 25
+[I] AnalogConfigESP32.h : 64 - analog right output pin: 26
+[I] AnalogDriverESP32.h : 51 - auto_center
+[I] AnalogDriverESP32.h : 112 - TX_MODE
+[I] AnalogAudioStream.h : 46 - virtual void audio_tools::AnalogAudioStream::setAudioInfo(audio_tools::AudioInfo)
+[I] AudioTypes.h : 128 -  sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+[I] AnalogConfigESP32.h : 63 - analog left output pin: 25
+[I] AnalogConfigESP32.h : 64 - analog right output pin: 26
+[I] AnalogAudioStream.h : 72 - virtual void audio_tools::AnalogAudioStream::end()
+[I] AnalogDriverESP32.h : 138 - end
+[I] AnalogAudioStream.h : 66 - bool audio_tools::AnalogAudioStream::begin(audio_tools::AnalogConfig)
+[I] AnalogDriverESP32.h : 47 - virtual bool audio_tools::AnalogDriverESP32::begin(audio_tools::AnalogConfigESP32)
+[I] AudioTypes.h : 128 -  sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+[I] AnalogConfigESP32.h : 63 - analog left output pin: 25
+[I] AnalogConfigESP32.h : 64 - analog right output pin: 26
+[I] AnalogDriverESP32.h : 51 - auto_center
+[I] AnalogDriverESP32.h : 112 - TX_MODE
+[I] AnalogAudioStream.h : 46 - virtual void audio_tools::AnalogAudioStream::setAudioInfo(audio_tools::AudioInfo)
+[I] AudioTypes.h : 128 - in: sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+[I] AudioTypes.h : 128 - out: sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+playback: packets=26 bytes=953 dropped_packets=0 dropped_bytes=0
+[I] AnalogAudioStream.h : 72 - virtual void audio_tools::AnalogAudioStream::end()
+[I] AnalogDriverESP32.h : 138 - end
+after playback: free_heap=270652 min_free_heap=240484 largest_block=110580 free_psram=0 loop_stack_free=2172
+running: free_heap=270652 min_free_heap=240484 largest_block=110580 free_psram=0 loop_stack_free=2172
+[I] AnalogConfigESP32.h : 50 - I2S_MODE_ADC_BUILT_IN
+[I] AnalogAudioStream.h : 66 - bool audio_tools::AnalogAudioStream::begin(audio_tools::AnalogConfig)
+[I] AnalogDriverESP32.h : 47 - virtual bool audio_tools::AnalogDriverESP32::begin(audio_tools::AnalogConfigESP32)
+[I] AudioTypes.h : 128 -  sample_rate: 16000 / channels: 1 / bits_per_sample: 16
+[I] AnalogDriverESP32.h : 51 - auto_center
 
 assert failed: block_locate_free heap_tlsf.c:441 (block_size(block) >= size)
 
@@ -63,4 +100,13 @@ Backtrace: 0x40083805:0x3ffb3de0 0x4008a045:0x3ffb3e00 0x4008f031:0x3ffb3e20 0x4
   #13 0x400d43b5 in (anonymous namespace)::start_adc() at src/main.cpp:156
   #14 0x400d6d08 in loop() at src/main.cpp:289
   #15 0x400ec94d in loopTask(void*) at /Users/ziss/.platformio/packages/framework-arduinoespressif32/cores/esp32/main.cpp:50
+
+
+
+
+
+ELF file SHA256: 4667a9ad677a4ec7
+
+Rebooting...
+ets Jul 29 2019 12:21:46
 ```
