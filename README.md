@@ -7,6 +7,8 @@ Two environments are provided:
 ```sh
 pio run -e esp32dev_no_bt
 pio run -e esp32dev_bt
+pio run -e esp32dev_patch_no_bt
+pio run -e esp32dev_patch_bt
 ```
 
 Failure:
