@@ -5,10 +5,10 @@ Minimal PlatformIO project that starts ESP32 ADC capture with Arduino Audio Tool
 Two environments are provided:
 
 ```sh
-pio run -e esp32dev_no_bt
-pio run -e esp32dev_bt
-pio run -e esp32dev_patch_no_bt
-pio run -e esp32dev_patch_bt
+pio run -e esp32dev_no_bt -t upload -t monitor
+pio run -e esp32dev_bt -t upload -t monitor
+pio run -e esp32dev_patch_no_bt -t upload -t monitor
+pio run -e esp32dev_patch_bt -t upload -t monitor
 ```
 
 Failure:
